@@ -1,0 +1,110 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+	<script src="../../lib/mespeak.js"></script>
+	<script>
+
+	meSpeak.loadVoice('../../lib/mespeak-voices/ca.json'); // load catalan espeak voice
+
+	var menuLoaded = 0;
+	var label, input, checkbox, speakbutton, vslider, rslider, pslider; // UI
+	var params;
+
+	function setup()
+	{
+		// input dialog:
+		input = createInput("hola mon, bon dia!!!");
+		//input.style("width", 400);
+  		input.position(20, 65);
+		// checkbox:
+		checkbox = createInput(0, 1, 0);
+		checkbox.attribute("type", "checkbox");
+		checkbox.style("width", "15px");
+		checkbox.style("height", "15px");
+  		checkbox.position(100, 100);
+		// button:
+		speakbutton = createButton('Speak');
+  		speakbutton.position(20, 100);
+  		speakbutton.mousePressed(doSpeak);
+  		// sliders:
+  		vslider = createSlider(0, 20, 10);
+  		vslider.position(20, 140);
+  		vslider.mouseReleased(setVolume);
+  		rslider = createSlider(10., 300., 160.);
+  		rslider.position(20, 160);
+  		rslider.mouseReleased(setRate);
+  		pslider = createSlider(0, 99, 50);
+  		pslider.position(20, 180);
+  		pslider.mouseReleased(setPitch);
+  		vbox = createSelect();
+  		vbox.option('f1');
+  		vbox.option('f2');
+  		vbox.option('f3');
+  		vbox.option('m1');
+  		vbox.option('m2');
+  		vbox.option('m3');
+  		vbox.option('whisper');
+  		vbox.option('klatt');
+  		vbox.position(20,200);
+  		vbox.changed(setVariant);
+		// labels:
+		label = createDiv("say something:");
+		label.position(20, 40);
+		label = createDiv("interrupt?");
+		label.position(125, 100);
+		label = createDiv("volume");
+		label.position(160, 140);
+		label = createDiv("speed");
+		label.position(160, 160);
+		label = createDiv("pitch");
+		label.position(160, 180);
+
+  		// say default parameters
+		params = { amplitude: 10,
+              pitch: 50,
+              speed: 160
+            }
+
+	}
+
+	function setVolume()
+	{
+		params.amplitude = vslider.value();
+	}
+	function setRate()
+	{
+		params.speed = rslider.value();
+	}
+	function setPitch()
+	{
+		params.pitch = pslider.value();
+	}
+
+	function setVariant()
+	{
+		params.variant = vbox.value();
+	}
+
+	function draw()
+	{
+		// why draw when you can click?
+	}
+
+	function doSpeak()
+	{
+		//meSpeak.speak(input.value())
+
+		meSpeak.speak(input.value(), {
+              amplitude: params.amplitude,
+              pitch: params.pitch,
+              speed: params.speed,
+              variant: params.variant
+            });
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>

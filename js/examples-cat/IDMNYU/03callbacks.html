@@ -1,0 +1,63 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+	<script src="../../lib/mespeak.js"></script>
+	<script>
+
+	meSpeak.loadVoice('../../lib/mespeak-voices/ca.json'); // load catalan espeak voice
+
+	var lyric = "Molt he estimat i molt estimo encara.  Ho dic content i fins un poc sorprès de tant d'amor que tot ho clarifica.  Molt he estimat i estimaré molt més sense cap llei de mirament ni traves que m'escatimin el fondo plaer que molta gent dirà incomprensible.  Ho dic content: molt he estimat i molt he d'estimar. Vull que tothom ho sàpiga.";
+
+	var speakbutton; // UI
+	var id;
+
+	function setup()
+	{
+		createCanvas(400, 400);
+
+		// button:
+		speakbutton = createButton('Speak');
+  		speakbutton.position(180, 200);
+  		speakbutton.mousePressed(buttonClicked);
+
+	}
+
+	function draw()
+	{
+		// why draw when you can click?
+	}
+
+	function buttonClicked()
+	{
+		if(speakbutton.elt.innerHTML=='Speak'){
+			id = meSpeak.speak(lyric, {speed: 130});
+			speechStarted();
+		}
+		else if(speakbutton.elt.innerHTML=='Stop'){
+			meSpeak.stop(id);
+			speechStarted();
+			speechEnded();
+		}
+	}
+
+
+	function speechStarted()
+	{
+		background(0, 255, 0);
+		speakbutton.elt.innerHTML = 'Stop';
+	}
+
+	
+
+	function speechEnded()
+	{
+		background(255, 0, 0);
+		speakbutton.elt.innerHTML = 'Speak';
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>
