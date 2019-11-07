@@ -1,5 +1,5 @@
 # TallersParla
-Recursos de [tallers de tecnologia de la parla](https://collectivat.cat/blog/2019-10-16-tallers-tecnologia-de-la-parla/)
+Recursos de [tallers de tecnologia de la parla i les alternatives lliures en català.](https://collectivat.cat/blog/2019-10-16-tallers-tecnologia-de-la-parla/)
 
 ## Javascript Setup
 
@@ -27,7 +27,7 @@ També utilitzarem l’add-on [*p5.js-speech*](https://idmnyu.github.io/p5.js-sp
 
 ### espeak instal·lació
 
-eSpeak és un sintetitzador de parla obert i lliure. És una aplicació molt compacte i pot generar veus en molts idiomes. És util sobretot per Linux i Windows, perquè MacOS té la possibilitat de fer fer servir les veus d'Apple.
+eSpeak és un sintetitzador de parla obert i lliure. És una aplicació molt compacte i pot generar veus en diverses idiomes inclòs el català. És util sobretot per Linux i Windows, perquè MacOS té la possibilitat de fer fer servir les veus d'Apple.
 
 Per instal·lar:
 - [linux](https://vitux.com/convert-text-to-voice-with-espeak-on-ubuntu/)
@@ -58,13 +58,13 @@ cd js
 python -m http.server
 ```
 
-Per veure el resultat, mira al vostre navegador amb l'adreça:
+Per veure el resultat, mira al vostre navegador amb l'url:
 
 ```
 http://localhost:8000/<path-to-example>
 ```
 
-Per exemple, el primer exemple hauria de correr a l'adreça:
+Per exemple, el primer exemple hauria de correr a l'url:
 
 ```
 http://localhost:8000/examples-eng/IDMNYU/01simple.html
