@@ -1,78 +1,83 @@
 # TallersParla
-Recursos de tallers de tecnologia de la parla
+Recursos de [tallers de tecnologia de la parla i les alternatives lliures en català.](https://collectivat.cat/blog/2019-10-16-tallers-tecnologia-de-la-parla/)
 
 ## Javascript Setup
 
-Requirements:
+Requisits:
 - Python
-- Chrome browser 
+- Navegador de Chrome
 - espeak
-- p5.js (included)
-- p5.js-speech (included)
+- p5.js (inclòs)
+- p5.js-speech (inclòs)
 
-### p5.js environment
+### p5.js
 
-Examples are based on the [*p5.js* environment](https://p5js.org/reference/) which is an open-source JavaScript library for creative coding. In order to load p5.js under your html:
+Els exemples es basen en [l'entorn *p5.js*](https://p5js.org/reference/), que és una llibreria de JavaScript de codi obert pel desenvolupament dels projectes creatives. Per carregar p5.js, dins del vostre html:
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
 ```
 
-We will also use the [*p5.js-speech*](https://idmnyu.github.io/p5.js-speech/) addon which accomodates use of speech features in browser. To load:
+També utilitzarem l’add-on [*p5.js-speech*](https://idmnyu.github.io/p5.js-speech/) que facilita l'ús de funcions de la parla al navegador. Per carregar:
 
 ```
 <script src="../../lib/p5.speech.js"></script>
 ```
 
-### espeak installation
+### espeak instal·lació
 
-eSpeak is a compact open source software speech synthesizer for English and other languages, for Linux and Windows. 
+eSpeak és un sintetitzador de parla obert i lliure. És una aplicació molt compacte i pot generar veus en diverses idiomes inclòs el català. És util sobretot per Linux i Windows, perquè MacOS té la possibilitat de fer fer servir les veus d'Apple.
 
-To install:
+Per instal·lar:
 - [linux](https://vitux.com/convert-text-to-voice-with-espeak-on-ubuntu/)
 - [mac](http://macappstore.org/espeak/)
-- [windows (not tested)](https://support.office.com/en-us/article/How-to-download-Text-to-Speech-languages-for-Windows-10-d5a6b612-b3ae-423f-afa5-4f6caf1ec5d3)
+- [windows (no provat)](https://support.office.com/en-us/article/How-to-download-Text-to-Speech-languages-for-Windows-10-d5a6b612-b3ae-423f-afa5-4f6caf1ec5d3)
 
-eSpeak is called through the javascript library mespeak. For further reference: https://masswerk.at/mespeak/
+Per les aplicacions de JavaScript, es pot cridar per eSpeak mitjançant la llibreria mespeak. Per a més informació: https://masswerk.at/mespeak/
 
-In order to load mespeak under your html:
+Per poder carregar mespeak, cal fer aquesta crida dins del vostre html:
 
 ```
 <script src="../../lib/mespeak.js"></script>
 ```
 
-### Running the examples
+### Executar els exemples
 
-Javascript examples we'll cover in the first workshop are included in this repository. You can download it either manually or through git:
+En aquest repositori, es pot trobar els nostres exemples de JavaScript. Podeu descarregar-los manualment o simplement mitjançat git:
 
 ```
 git clone https://github.com/CollectivaT-dev/TallersParla.git
 cd TallersParla
 ```
 
-To run javascript samples run a python server under the directory `js`:
+Per executar el codi de JavaScript, es necessari crear un servidor local. Una manera fàcil de fer-ho és, dins de la carpeta `js`:
 
 ```
 cd js
 python -m http.server
 ```
 
-To run an example, go to your browser and type:
+Per veure el resultat, mira al vostre navegador amb l'url:
 
 ```
 http://localhost:8000/<path-to-example>
 ```
 
-For example, to run the first English example:
+Per exemple, el primer exemple hauria de correr a l'url:
 
 ```
 http://localhost:8000/examples-eng/IDMNYU/01simple.html
 ```
 
-NOTE: For apps that connect to Google Cloud ASR, you must use Chrome.
+AVÍS: Els exemples de reconeixement de la parla utilitza els serveis de Google Cloud ASR, i per poder llançar-los cal fer servir el navegador Chrome.
 
-## References
+## Referències
 
-Sources for the javascript examples are modified from [p5.js-speech](https://github.com/IDMNYU/p5.js-speech) and [CodingTrain](https://github.com/CodingTrain/website/tree/master/CodingChallenges)
+Els exemples de JavaScript són versions modificades de [p5.js-speech](https://github.com/IDMNYU/p5.js-speech) i [CodingTrain](https://github.com/CodingTrain/website/tree/master/CodingChallenges).
 
+---
+
+La preparació d'aquests recursos va ser possible amb el suport del [Departament de Cultura](http://cultura.gencat.cat/) de la Generalitat i una part dels fons provenen dels cabals que atorga la Junta d'Herències de la Generalitat de Catalunya.
+
+![](https://github.com/collectivat/cmusphinx-models/blob/master/img/logo_generalitat.png)
