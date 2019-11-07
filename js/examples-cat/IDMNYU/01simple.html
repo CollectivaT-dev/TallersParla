@@ -22,21 +22,13 @@
 		textSize(72);
 		textAlign(CENTER);
 		text("click me", width/2, height/2);
-		// button:
-		listbutton = createButton('List Voices');
-  		listbutton.position(180, 430);
-  		listbutton.mousePressed(doList);
+
 
 	}
 
 	function draw()
 	{
 		// why draw when you can click?
-	}
-
-	function doList()
-	{
-		myVoice.listVoices(); // debug printer for voice options
 	}
 
 	function keyPressed()
@@ -49,9 +41,7 @@
 		// if in bounds:
 		if(mouseX<width && mouseY<height) {
 			ellipse(mouseX, mouseY, 50, 50); // circle
-			// Load random voice
-			// ...
-			meSpeak
+
 			meSpeak.speak(words[iptr])
 			iptr = (iptr+1) % words.length; // increment
 		}
