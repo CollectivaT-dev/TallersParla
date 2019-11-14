@@ -1,7 +1,14 @@
 # TallersParla
 Recursos de [tallers de tecnologia de la parla i les alternatives lliures en català.](https://collectivat.cat/blog/2019-10-16-tallers-tecnologia-de-la-parla/)
 
-## Javascript Setup
+## Exemples avançats
+
+No cal instal·lar res pels exemples avançats, perquè estan preparats per executar al nuvol, mitjançant el Google Colaboratory. Els llibretes (notebooks) de jupyter estan a la carpeta de `ipyn`. Per executar-los al Colaboratory simplement podeu anar a l'exemple [d'inferència](https://colab.research.google.com/github/CollectivaT-dev/TallersParla/blob/master/ipynb/tacotron2_inference.ipynb
+) i [d'entrenament](https://colab.research.google.com/github/CollectivaT-dev/TallersParla/blob/master/ipynb/tacotron2_transfer_learn.ipynb) mitjançant transferència d’aprenentatge.
+
+## Exemples bàsics
+
+### Javascript Setup
 
 Requisits:
 - Python
