@@ -8,7 +8,7 @@ No cal instal·lar res pels exemples avançats, perquè estan preparats per exec
 
 L'objectiu del `tacotron2_inference.ipynb` és fer servir els models de tacotron2 i waveglow oberts, per sintetitzar frases en anglès, i aquest llibreta genera fitxers d'àudio. Mitjançant del llibreta de tacotron2_transfer_learn.ipynb es pot entrenar nous models de tacotron2, a partir del model publicat en anglès, és a dir executar un procés de "transfer learning" (aprenentatge de transferència).
 
-![](https://github.com/collectivat-dev/TallersParla/blob/master/img/cuda03.png)
+![](https://github.com/collectivat-dev/TallersParla/blob/master/img/colab02.png)
 
 ## Exemples bàsics
 
